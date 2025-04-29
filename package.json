@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate",
     "db:seed:local": "cross-env DB_LOCAL_PATH=$(find .wrangler/state/v3/d1/miniflare-D1DatabaseObject -type f -name '*.sqlite' -print -quit) tsx ./db/seed.ts",
@@ -46,7 +45,6 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.12.1",
     "@cloudflare/workers-types": "^4.20240712.0",
-    "@haydenull/fabric": "^0.2.6",
     "@next/env": "^14.2.5",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tanstack/react-query-devtools": "^5.50.1",
@@ -56,8 +54,6 @@
     "better-sqlite3": "^11.9.1",
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.23.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4",
     "tsx": "^4.16.2",
     "typescript": "^5",
     "unplugin-turbo-console": "^1.9.11",

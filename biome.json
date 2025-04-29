@@ -7,7 +7,17 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "ignore": [
+      "node_modules",
+      "dist",
+      "build",
+      "public",
+      "*.log",
+      "*.env",
+      ".next",
+      ".wrangler",
+      "db/migrations"
+    ]
   },
   "formatter": {
     "enabled": true,

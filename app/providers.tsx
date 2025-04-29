@@ -1,5 +1,6 @@
 'use client'
 
+import { Theme } from '@radix-ui/themes'
 // https://tanstack.com/query/latest/docs/framework/react/guides/advanced-ssr#experimental-streaming-without-prefetching-in-nextjs
 import {
   QueryClient,
@@ -44,9 +45,11 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = getQueryClient()
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryStreamedHydration>{children}</ReactQueryStreamedHydration>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <Theme>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryStreamedHydration>{children}</ReactQueryStreamedHydration>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </Theme>
   )
 }

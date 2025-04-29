@@ -1,13 +1,9 @@
 import { getUsers } from '@/services/actions'
+import HomeClient from './client'
 
 export const runtime = 'edge'
 
 export default async function Home() {
   const users = await getUsers()
-  return (
-    <div>
-      <h1>Users</h1>
-      <pre>{JSON.stringify(users, null, 2)}</pre>
-    </div>
-  )
+  return <HomeClient users={users} />
 }

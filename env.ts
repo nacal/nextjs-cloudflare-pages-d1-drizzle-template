@@ -11,7 +11,9 @@ export const env = createEnv({
     CLOUDFLARE_DATABASE_ID: z.string(),
     CLOUDFLARE_PREVIEW_DATABASE_ID: z.string(),
     DB_LOCAL_PATH: z.string().optional(),
-    NODE_ENV: z.enum(['development', 'preview', 'production']).default('development'),
+    NODE_ENV: z
+      .enum(['development', 'preview', 'production'])
+      .default('development'),
   },
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
